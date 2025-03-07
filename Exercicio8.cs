@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 class Program
 {
@@ -17,7 +16,7 @@ class Program
         for (int i = 0; i < n; i++)
         {
             Console.WriteLine($"Digite a altura da {i + 1}ª pessoa: ");
-            alturas[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            alturas[i] = double.Parse(Console.ReadLine());
 
             Console.WriteLine($"Digite o gênero (M/F) da {i + 1}ª pessoa: ");
             generos[i] = char.Parse(Console.ReadLine().ToUpper());
@@ -48,13 +47,13 @@ class Program
             }
         }
 
-        Console.WriteLine($"\nMenor altura = {menorAltura.ToString("F2", CultureInfo.InvariantCulture)}");
-        Console.WriteLine($"Maior altura = {maiorAltura.ToString("F2", CultureInfo.InvariantCulture)}");
+        Console.WriteLine($"\nMenor altura = {menorAltura.ToString("F2")}");
+        Console.WriteLine($"Maior altura = {maiorAltura.ToString("F2")}");
 
         if (quantidadeMulheres > 0)
         {
             double mediaAlturaMulheres = somaAlturaMulheres / quantidadeMulheres;
-            Console.WriteLine($"Média das alturas das mulheres = {mediaAlturaMulheres.ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Média das alturas das mulheres = {mediaAlturaMulheres.ToString("F2")}");
         }
         else
         {
